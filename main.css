@@ -15,30 +15,10 @@ body {
     justify-content: center;
 }
 
-/* .parallax { 
-    background-image: url("img_parallax.jpg");
-  
-    height: 500px; 
-  
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-} */
-
-/* greybox styling */
-/* section,
-header,
-nav {
-    background: lightgray;
-    border: solid 1px black;
-} */
-.nav-container {}
-
 .top-menu {
     padding: 10px;
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     border-style: solid;
     border-width: 0px 0px 2px 0px;
     width: 100%;
@@ -48,6 +28,13 @@ nav {
     align-items: center;
     justify-content: space-between;
     background-color: white;
+    flex-wrap: wrap;
+}
+
+.hamburger-menu {
+    font-size: 24px;
+    text-align: right;
+    min-width: 500px;
 }
 
 .hidden {
@@ -118,13 +105,17 @@ p {
     .header-desktop h1 {
         font-size: 48pt;
     }
+
     .header-desktop h2 {
         font-size: 32pt;
     }
-    .top-menu, .top-header {
+
+    .top-menu,
+    .top-header {
         display: none;
         border-style: none;
     }
+
     .side-menu {
         display: flex;
         flex-direction: column;
@@ -137,13 +128,16 @@ p {
         border-style: solid;
         border-width: 0px 4px 0px 0px;
     }
+
     .side-header ul {
         padding: 40px;
         font-size: 18px;
     }
+
     .side-header li {
         padding: 10px;
     }
+
     .contact-box {
         flex-direction: column;
         justify-content: flex-start;

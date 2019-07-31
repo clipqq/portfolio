@@ -8,15 +8,22 @@
     <link href="main.css" rel="stylesheet" type="text/css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="index.js"></script>
-    <title>Cliff's Portfolio</title>
+    <title>Cliff Tran.</title>
 </head>
 
 <body>
     <main>
         <!-- top menu mobile version -->
         <nav class='top-menu'>
-            <img class='hamburger' src="img-assets/hamburger.png" alt="hamburger menu">
             <h1 class="banner-title">Cliff Tran.</h1>
+            <img class='hamburger' src="img-assets/hamburger.png" alt="hamburger menu">
+            <div class="hamburger-menu">
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>    
         </nav>
         <!-- side menu desktop version -->
         <nav class="side-menu">
@@ -26,13 +33,12 @@
                 <h2>Web developer |</h2>
                 <h2>San Francisco</h2>
                 <ul>
-                    <li>About</li>
-                    <li>Projects</li>
-                    <li>Contact</li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </header>
         </nav>
-        <div class="parallax"></div>
         <!-- top header mobile version -->
         <header class="top-header">
             <h1>Cliff Tran.</h1>
@@ -56,7 +62,7 @@
                     </p>
                 </div>
             </section>
-            <section class='section-panel'>
+            <section id="about" class='section-panel'>
                 <h2>Why I code.</h2>
                 <p>You know that feeling you got when you were a kid running up against that installation error on some
                     PC
@@ -89,7 +95,7 @@
                         moved into yield and pricing for a few big media companies and managed teams of analysts.</p>
                     <p>Now I code.</p>
             </section>
-            <section class='section-panel'>
+            <section id="projects" class='section-panel'>
                 <h2>Projects.</h2>
                 <p>Here are some of my apps.</p>
                 <div class="project-box">
@@ -108,7 +114,7 @@
                     <img id='project1' src="img-assets/sample1.jpeg" alt="project image">
                 </div>
             </section>
-            <section class='section-panel'>
+            <section id="contact" class='section-panel'>
                 <h2>Contact info.</h2>
                 <p>Drop me a line.</p>
                 <div class="contact-box">
