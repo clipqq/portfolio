@@ -18,7 +18,7 @@ body {
 .top-menu {
     padding: 10px;
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     border-style: solid;
     border-width: 0px 0px 2px 0px;
     width: 100%;
@@ -29,20 +29,58 @@ body {
     justify-content: space-between;
     background-color: white;
     flex-wrap: wrap;
+    min-width: 380px;
 }
 
-.hamburger-menu {
-    font-size: 24px;
+.top-menu ul {
+    list-style: none;
+    display: block;
+    /* display: none; */
     text-align: right;
-    min-width: 500px;
+    font-size: 18pt;
 }
 
-.hidden {
-    display: none;
+.top-menu li {
+    padding: 5px;
+  }
+
+  .top-menu li a {
+    color: black;
+    padding: 5px;
+  }
+
+  .top-menu .menu-btn {
+    /* display: none; */
+  }  
+
+  .top-menu .menu-btn:checked ~ .top-menu {
+    max-height: 500px;
+  }
+
+  .top-menu .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+  }
+  
+  .top-menu .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+  }
+  
+  .top-menu .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+  }
+  
+  .top-menu .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+  .top-menu .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+  }
+
+.banner-title {
+    min-width: 80%;
 }
 
 nav img {
     height: 60px;
+
 }
 
 nav h1 {
