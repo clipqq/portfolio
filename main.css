@@ -35,11 +35,18 @@ main {
     background-color: white;
 }
 
+li a {
+    text-decoration: none;
+}
+
+h2 {
+    padding-bottom: 10px;
+}
+
 .header li a {
     display: block;
     padding: 20px 20px;
     border-right: 1px solid white;
-    text-decoration: none;
 }
 
 .header p {
@@ -155,9 +162,8 @@ p {
 
 .contact-box {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .contact-box img {
