@@ -2,87 +2,235 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: monospace;
+    color: black;
 }
 
 /* vertical spacing */
 
-body {
-    font-family: monospace;
+main {
     background-color: white;
-    color: black;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-top: 40px;
 }
 
-/* .parallax { 
-    background-image: url("img_parallax.jpg");
-  
-    height: 500px; 
-  
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-} */
 
-/* greybox styling */
-/* section,
-header,
-nav {
-    background: lightgray;
-    border: solid 1px black;
-} */
-.nav-container {}
-
-nav {
-    padding: 10px;
-    display: flex;
-    flex-direction: row-reverse;
+.header {
+    background-color: white;
     border-style: solid;
     border-width: 0px 0px 2px 0px;
-    width: 100%;
-    background: white;
     position: fixed;
-    top: 0;
-    height: 80px;
+    width: 100%;
+    z-index: 1;
+    min-width: 270px;
 }
 
-nav img {
-    height: 60px;
+.header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: white;
 }
 
-main {
-    margin-top: 50px;
+li a {
+    text-decoration: none;
 }
 
-.headliner {
-    padding: 40px 40px 10px 40px;
-}
-
-.headliner h1 {
-    font-size: 32pt;
-}
-
-.headliner h2 {
-    font-size: 18pt;
-}
-
-h1,
 h2 {
-    padding-left: 10px;
+    padding-bottom: 10px;
 }
 
+.header li a {
+    display: block;
+    padding: 20px 20px;
+    border-right: 1px solid white;
+}
+
+.header p {
+    display: block;
+    padding: 20px 20px;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+    background-color: white;
+}
+
+.header .logo {
+    float: left;
+    font-size: 2em;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin-top: 5px;
+}
+
+/* menu */
+
+.header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 30px 20px;
+    position: relative;
+    user-select: none;
+}
+
+.header .menu-icon .navicon {
+    background: black;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+    background: black;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+    top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+    top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+    display: none;
+}
+
+.header .menu-btn:checked~.menu {
+    max-height: 240px;
+}
+
+.header .menu-btn:checked~.menu-icon .navicon {
+    background: transparent;
+}
+
+.header .menu-btn:checked~.menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked~.menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+
+.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
+    top: 0;
+}
+
+
+.side-menu {
+    display: none;
+}
 
 .section-panel {
     padding: 40px;
 }
 
+.project-box {
+    padding-top: 40px;
+    outline: 5px;
+    outline-color: black;
+}
+
 p {
-    padding: 10px;
+    padding: 10px 0px 10px 0px;
     font-size: 12pt;
 }
 
-#project1 {
-    height: 100px;
+#project {
+    width: 300px;
+    height: auto;
+}
+
+.contact-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.contact-box img {
+    height: 40px;
+    margin: 10px;
+}
+
+.contact-box div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+@media only screen and (min-width: 800px) {
+    .side-header h1 {
+        font-size: 26pt;
+    }
+
+    .side-header h2 {
+        font-size: 18pt;
+    }
+
+    .header {
+        display: none;
+        border-style: none;
+    }
+
+    main {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .side-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: relative;
+        padding: 20px;
+        min-width: 280px;
+        flex-wrap: nowrap;
+        border-style: solid;
+        border-width: 0px 4px 0px 0px;
+    }
+
+    .side-header ul {
+        padding: 40px;
+        font-size: 18px;
+    }
+
+    .side-header li {
+        padding: 10px;
+    }
+
+    .contact-box {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    #project {
+        width: 600px;
+        height: auto;
+    }
 }
