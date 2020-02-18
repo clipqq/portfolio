@@ -16,7 +16,6 @@ main {
     padding-top: 40px;
 }
 
-
 .header {
     background-color: white;
     border-style: solid;
@@ -72,7 +71,7 @@ h2 {
 .header .menu {
     clear: both;
     max-height: 0;
-    transition: max-height .2s ease-out;
+    transition: max-height 0.2s ease-out;
 }
 
 /* menu icon */
@@ -91,7 +90,7 @@ h2 {
     display: block;
     height: 2px;
     position: relative;
-    transition: background .2s ease-out;
+    transition: background 0.2s ease-out;
     width: 18px;
 }
 
@@ -102,7 +101,7 @@ h2 {
     display: block;
     height: 100%;
     position: absolute;
-    transition: all .2s ease-out;
+    transition: all 0.2s ease-out;
     width: 100%;
 }
 
@@ -120,27 +119,26 @@ h2 {
     display: none;
 }
 
-.header .menu-btn:checked~.menu {
+.header .menu-btn:checked ~ .menu {
     max-height: 240px;
 }
 
-.header .menu-btn:checked~.menu-icon .navicon {
+.header .menu-btn:checked ~ .menu-icon .navicon {
     background: transparent;
 }
 
-.header .menu-btn:checked~.menu-icon .navicon:before {
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
     transform: rotate(-45deg);
 }
 
-.header .menu-btn:checked~.menu-icon .navicon:after {
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
     transform: rotate(45deg);
 }
 
-.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
-.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
     top: 0;
 }
-
 
 .side-menu {
     display: none;
@@ -161,9 +159,14 @@ p {
     font-size: 12pt;
 }
 
-#project {
+.project {
     width: 300px;
     height: auto;
+}
+
+img.project {
+    border-radius: 10px;
+    border: 2px solid black;
 }
 
 .contact-box {
@@ -229,7 +232,7 @@ p {
         justify-content: flex-start;
         align-items: flex-start;
     }
-    #project {
+    .project {
         width: 600px;
         height: auto;
     }
