@@ -146,9 +146,14 @@ h2 {
     display: none;
 }
 
-.section-panel,
-.project-box {
+.section-panel {
     padding: 40px;
+}
+
+.project-box {
+    padding-top: 40px;
+    outline: 5px;
+    outline-color: black;
 }
 
 p {
@@ -156,8 +161,9 @@ p {
     font-size: 12pt;
 }
 
-#project1 {
-    height: 100px;
+#project {
+    width: 300px;
+    height: auto;
 }
 
 .contact-box {
@@ -222,5 +228,9 @@ p {
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
+    }
+    #project {
+        width: 600px;
+        height: auto;
     }
 }
