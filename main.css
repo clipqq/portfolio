@@ -186,7 +186,7 @@ img.project {
     align-items: center;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1000px) {
     .side-header h1 {
         font-size: 26pt;
     }
