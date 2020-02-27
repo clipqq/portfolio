@@ -237,3 +237,23 @@ img.project {
         height: auto;
     }
 }
+
+@media only screen and (min-width: 320px) {
+    .project {
+        width: 200px;
+        height: auto;
+    }
+}
+
+section {
+    overflow: hidden;
+    position: relative;
+}
+
+#about,
+#projects,
+#contact {
+    position: absolute;
+    top: -40px;
+    visibility: hidden;
+}
